@@ -19,8 +19,6 @@
     ".": "./dist/index.mjs",
     "./package.json": "./package.json"
   },
-  "main": "./dist/index.mjs",
-  "module": "./dist/index.mjs",
   "types": "./dist/index.d.mts",
   "files": [
     "dist"
@@ -42,7 +40,7 @@
     "prepublishOnly": "pnpm run build"
   },
   "peerDependencies": {
-    "tsdown": "^0.18.4"
+    "tsdown": "^0.19.0-0"
   },
   "dependencies": {
     "@arethetypeswrong/core": "^0.18.2",
@@ -56,7 +54,7 @@
     "bumpp": "^10.3.2",
     "eslint": "^9.39.2",
     "prettier": "^3.7.4",
-    "tsdown": "^0.18.4",
+    "tsdown": "^0.19.0-beta.1",
     "typescript": "^5.9.3"
   },
   "prettier": "@sxzz/prettier-config"
