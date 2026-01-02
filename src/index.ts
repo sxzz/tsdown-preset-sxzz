@@ -3,10 +3,11 @@ import type { TsdownInputOption } from 'tsdown'
 
 export interface LibOptions {
   entry?: 'index' | 'shallow' | 'all' | Exclude<TsdownInputOption, string>
+  inlineDeps?: (string | RegExp)[]
 }
 
 export function lib(
-  { entry = 'index' }: LibOptions = {},
+  { entry = 'index', inlineDeps = [] }: LibOptions = {},
   overrides: UserConfig = {},
 ): UserConfig {
   return mergeConfig(
@@ -19,9 +20,11 @@ export function lib(
             : entry === 'all'
               ? 'src/**/*.ts'
               : entry,
-      dts: true,
+      dts: {
+        resolve: inlineDeps,
+      },
       platform: 'neutral',
-      inlineOnly: [],
+      inlineOnly: inlineDeps,
       exports: true,
       publint: {
         enabled: 'ci-only',
