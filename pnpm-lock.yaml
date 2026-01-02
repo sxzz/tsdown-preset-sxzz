@@ -37,8 +37,8 @@ importers:
         specifier: ^3.7.4
         version: 3.7.4
       tsdown:
-        specifier: https://pkg.pr.new/tsdown@7847902
-        version: https://pkg.pr.new/tsdown@7847902(@arethetypeswrong/core@0.18.2)(@typescript/native-preview@7.0.0-dev.20251228.1)(publint@0.3.16)(synckit@0.11.11)(typescript@5.9.3)
+        specifier: ^0.18.4
+        version: 0.18.4(@arethetypeswrong/core@0.18.2)(@typescript/native-preview@7.0.0-dev.20251228.1)(publint@0.3.16)(synckit@0.11.11)(typescript@5.9.3)
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
@@ -1616,9 +1616,8 @@ packages:
     peerDependencies:
       typescript: '>=4.0.0'
 
-  tsdown@https://pkg.pr.new/tsdown@7847902:
-    resolution: {integrity: sha512-2gJFE/oTEqZE/RhcTh/hpFCtdOM9nW8+s9ZltC6nagj6HpZuXgEaA2TAcT3O6LlO7MkKqxY8A2fFPdE+3WGP+Q==, tarball: https://pkg.pr.new/tsdown@7847902}
-    version: 0.18.3
+  tsdown@0.18.4:
+    resolution: {integrity: sha512-J/tRS6hsZTkvqmt4+xdELUCkQYDuUCXgBv0fw3ImV09WPGbEKfsPD65E+WUjSu3E7Z6tji9XZ1iWs8rbGqB/ZA==}
     engines: {node: '>=20.19.0'}
     hasBin: true
     peerDependencies:
@@ -3512,7 +3511,7 @@ snapshots:
       picomatch: 4.0.3
       typescript: 5.9.3
 
-  tsdown@https://pkg.pr.new/tsdown@7847902(@arethetypeswrong/core@0.18.2)(@typescript/native-preview@7.0.0-dev.20251228.1)(publint@0.3.16)(synckit@0.11.11)(typescript@5.9.3):
+  tsdown@0.18.4(@arethetypeswrong/core@0.18.2)(@typescript/native-preview@7.0.0-dev.20251228.1)(publint@0.3.16)(synckit@0.11.11)(typescript@5.9.3):
     dependencies:
       ansis: 4.2.0
       cac: 6.7.14
