@@ -20,9 +20,7 @@ export function lib(
             : entry === 'all'
               ? 'src/**/*.ts'
               : entry,
-      dts: {
-        resolve: inlineDeps,
-      },
+      dts: true,
       platform: 'neutral',
       inlineOnly: inlineDeps,
       exports: true,
