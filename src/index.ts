@@ -1,5 +1,10 @@
 import { mergeConfig, type UserConfig } from 'tsdown/config'
-import type { TsdownInputOption } from 'tsdown'
+import type {
+  AttwOptions,
+  PublintOptions,
+  TsdownInputOption,
+  WithEnabled,
+} from 'tsdown'
 
 export interface LibOptions {
   entry?: 'index' | 'shallow' | 'all' | Exclude<TsdownInputOption, string>
@@ -24,17 +29,17 @@ export function lib(
       platform: 'neutral',
       inlineOnly: inlineDeps,
       exports: true,
+      // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
       publint: {
         enabled: 'ci-only',
-        // @ts-expect-error internal
         resolvePaths: [import.meta.dirname],
-      },
+      } as WithEnabled<PublintOptions>,
+      // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
       attw: {
         enabled: 'ci-only',
-        // @ts-expect-error internal
         resolvePaths: [import.meta.dirname],
         profile: 'esm-only',
-      },
+      } as WithEnabled<AttwOptions>,
     },
     overrides,
   )
