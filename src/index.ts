@@ -1,4 +1,3 @@
-import process from 'node:process'
 import { mergeConfig, type UserConfig } from 'tsdown/config'
 import type {
   AttwOptions,
@@ -6,16 +5,6 @@ import type {
   TsdownInputOption,
   WithEnabled,
 } from 'tsdown'
-
-const resolveOpts = { paths: [process.cwd()] }
-function isInstalled(pkg: string): boolean {
-  try {
-    require.resolve(pkg, resolveOpts)
-    return true
-  } catch {
-    return false
-  }
-}
 
 export interface LibOptions {
   entry?: 'index' | 'shallow' | 'all' | Exclude<TsdownInputOption, string>
@@ -36,9 +25,7 @@ export function lib(
             : entry === 'all'
               ? 'src/**/*.ts'
               : entry,
-      dts: {
-        tsgo: isInstalled('@typescript/native-preview'),
-      },
+      dts: true,
       platform: 'neutral',
       inlineOnly: inlineDeps,
       exports: true,
