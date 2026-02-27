@@ -1,7 +1,7 @@
 {
   "name": "tsdown-preset-sxzz",
   "type": "module",
-  "version": "0.3.3",
+  "version": "0.4.0",
   "packageManager": "pnpm@10.30.3",
   "description": "An opinionated preset for tsdown.",
   "author": "Kevin Deng <sxzz@sxzz.moe>",
