@@ -27,7 +27,9 @@ export function lib(
               : entry,
       dts: true,
       platform: 'neutral',
-      inlineOnly: inlineDeps,
+      deps: {
+        onlyAllowBundle: inlineDeps,
+      },
       exports: true,
       // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
       publint: {
