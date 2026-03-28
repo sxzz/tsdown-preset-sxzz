@@ -1,10 +1,8 @@
+import * as attw from '@arethetypeswrong/core'
+import * as publint from 'publint'
+import * as publintUtils from 'publint/utils'
 import { mergeConfig, type UserConfig } from 'tsdown/config'
-import type {
-  AttwOptions,
-  PublintOptions,
-  TsdownInputOption,
-  WithEnabled,
-} from 'tsdown'
+import type { TsdownInputOption } from 'tsdown'
 
 export interface LibOptions {
   entry?: 'index' | 'shallow' | 'all' | Exclude<TsdownInputOption, string>
@@ -31,17 +29,15 @@ export function lib(
         onlyBundle: inlineDeps,
       },
       exports: true,
-      // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
       publint: {
         enabled: 'ci-only',
-        resolvePaths: [import.meta.dirname],
-      } as WithEnabled<PublintOptions>,
-      // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
+        module: [publint, publintUtils],
+      },
       attw: {
         enabled: 'ci-only',
-        resolvePaths: [import.meta.dirname],
         profile: 'esm-only',
-      } as WithEnabled<AttwOptions>,
+        module: attw,
+      },
     },
     overrides,
   )
