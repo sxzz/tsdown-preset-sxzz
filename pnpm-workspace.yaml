@@ -1,8 +1,11 @@
 packages: []
 
+overrides:
+  fflate: 0.8.2
+
 allowBuilds:
   esbuild: false
 
 trustPolicy: no-downgrade
 trustPolicyExclude:
-  - ts-api-utils@2.3.0
+  - tinyexec
