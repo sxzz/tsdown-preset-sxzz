@@ -2,7 +2,7 @@
   "name": "tsdown-preset-sxzz",
   "type": "module",
   "version": "0.6.0",
-  "packageManager": "pnpm@11.3.0",
+  "packageManager": "pnpm@11.18.0",
   "description": "An opinionated preset for tsdown.",
   "author": "Kevin Deng <sxzz@sxzz.moe>",
   "license": "MIT",
@@ -40,21 +40,21 @@
     "prepublishOnly": "pnpm run build"
   },
   "peerDependencies": {
-    "tsdown": "^0.22.0"
+    "tsdown": "^0.22.0 || ^0.23.0-0"
   },
   "dependencies": {
-    "@arethetypeswrong/core": "^0.18.2",
-    "publint": "^0.3.21"
+    "@arethetypeswrong/core": "^0.18.5",
+    "publint": "^0.3.22"
   },
   "devDependencies": {
-    "@sxzz/eslint-config": "^8.1.0",
-    "@sxzz/prettier-config": "^2.3.1",
-    "@types/node": "^25.9.1",
-    "@typescript/native-preview": "7.0.0-dev.20260525.1",
-    "bumpp": "^11.1.0",
-    "eslint": "^10.4.0",
-    "prettier": "^3.8.3",
-    "tsdown": "^0.22.0",
+    "@sxzz/eslint-config": "^8.4.0",
+    "@sxzz/prettier-config": "^2.3.2",
+    "@types/node": "^26.1.2",
+    "@typescript/native-preview": "7.0.0-dev.20260707.2",
+    "bumpp": "^12.1.1",
+    "eslint": "^10.8.0",
+    "prettier": "^3.9.6",
+    "tsdown": "^0.22.14",
     "typescript": "^6.0.3"
   },
   "prettier": "@sxzz/prettier-config"

@@ -1,11 +1,9 @@
 packages: []
 
-overrides:
-  fflate: 0.8.2
-
 allowBuilds:
   esbuild: false
 
+shellEmulator: true
+trustLockfile: true
 trustPolicy: no-downgrade
-trustPolicyExclude:
-  - tinyexec
+trustPolicyIgnoreAfter: 10080
